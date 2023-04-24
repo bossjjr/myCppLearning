@@ -5,7 +5,7 @@
 
 // 递归法
 
-ll quickMi_recursion(ll a, ll b, ll c)
+ll quickMi::quickMi_recursion(ll a, ll b, ll c)
 {
     if (b == 0)
         return 1;
@@ -15,7 +15,7 @@ ll quickMi_recursion(ll a, ll b, ll c)
     return (b & 1 == 1) ? (tmp * tmp * a) % c : (tmp * tmp) % c;
 }
 // 蒙哥马利法
-ll quickMi_mg(ll a, ll b, ll c)
+ll quickMi::quickMi_mg(ll a, ll b, ll c)
 {
     ll A = 1;
     ll T = a % c;
