@@ -58,4 +58,8 @@ public:
     void selection_sort(vector<int> &s);
     // bubble sort
     void bubble_sort(vector<int> &s);
+    // Insertion sort
+    void insertion_sort(vector<int> &s);
+    // BinaryInsert sort
+    void binary_insert_sort(vector<int> &s);
 };

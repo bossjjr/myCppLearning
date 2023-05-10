@@ -13,6 +13,6 @@ int main()
     cout << "----------" << endl;
     // 排序测试
     mySort S;
-    S.bubble_sort(S.s);
+    S.binary_insert_sort(S.s);
     return 0;
 }

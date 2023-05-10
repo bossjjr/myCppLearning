@@ -35,4 +35,51 @@ void mySort::bubble_sort(vector<int> &s)
     }
 }
 
-//
+// Insertion sort
+void mySort::insertion_sort(vector<int> &s)
+{
+    auto length = s.size();
+    for (int i = 1; i < length; i++)
+    {
+        int tmp = s[i];
+        int j;
+        for (j = i - 1; j >= 0; j--)
+        {
+            if (s[j] > tmp)
+            {
+                s[j + 1] = s[j];
+            }
+            else
+            {
+                break;
+            }
+        }
+        s[j + 1] = tmp;
+    }
+}
+
+// BinaryInsert sort
+void mySort::binary_insert_sort(vector<int> &s)
+{
+    auto length = s.size();
+    int left, right, middle;
+    for (int i = 1; i < length; i++)
+    {
+        int tmp = s[i];
+        left = 0;
+        right = i - 1;
+        while (left <= right)
+        {
+            middle = (left + right) / 2;
+            if (s[middle] > tmp)
+                right = middle - 1;
+            else
+                left = middle + 1;
+        }
+        for (int j = i - 1; j >= left; j--)
+        {
+            s[j + 1] = s[j];
+        }
+        s[left] = tmp;
+    }
+}
